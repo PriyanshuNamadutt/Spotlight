@@ -1,0 +1,110 @@
+{
+  "users": [
+    {
+      "id": "ab45a9d2-496e-4913-b2d1-980537cbaa97",
+      "username": "Priyanshu001",
+      "passwordHash": "$2a$10$G7OM/MVFoK6VmbORHwK5UunhXtcRU75xcUN78KzTrfu8BJvukwLdW",
+      "createdAt": "2026-07-02T15:39:06.219Z"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "9ba6a4a8-2785-4902-9a98-1e018506e41d",
+      "userId": "ab45a9d2-496e-4913-b2d1-980537cbaa97",
+      "type": "interview",
+      "resumeText": "\n\nPRIYANSHU  |  23NA10032\n\nB.Tech.(Hons.) in OCEAN ENGG. AND NAVAL ARCHITECTURE\nEDUCATION\nYearDegree/ExamInstituteCGPA/Marks\n2027B.TECHIIT Kharagpur7.34 / 10\n2022AISSCE (CBSE)D H Lawrence School87.6%\n2020AISSE (CBSE)Lal Bahadur Sastri School89.4%\nPROJECTS\nAutomated Room Allocation | C++\n- Developed an Automated Room Allocation System in C++ using STL and file handling.\n- Applied algorithm logic to allocate rooms efficiently while maintaing data consistency.\n- Improved accuracy and reduces human error in room assignment process.\nInventory Management System | C++\n- Developed a console-based Inventory Management System using C++, STL and file handling to manage product \n   records efficiently.\n- Implement features for adding, updating, deleting and searching products with persistent data storage.\n- Designed modular code using OOPs principles to ensure scalability and maintainability.\n- Reduced manual Inventory tracking errors by automating stock management operations. \nCOMPETITION/CONFERENCE\n- Practiced competitive programming on Codeforces to achieve a peak rating of 1214 ( pupil ) under the \n   handle Priyanshu_210.\n- Achieved a peak rating of 1516 ( 2 star ) under the handle priyanshu_0210\nSKILLS AND EXPERTISE\n- Language - Proficient : C, C++, Python. | Familiar : SQL, Java.\n- Packages &Tools : C++ STL, Git, Numpy, Pandas, Scikit - Learn, Matplotlib, VS code.\n- Skills : Data Structure and Algorithm, Object Oriented Programming.\nCOURSEWORK INFORMATION\n- Programming and Data Structure                                     - Probability and Statistics\n- Programming and Data Structure ( Lab )                              - Advanced Calculus\n- Linear Algebra, Numerical Analysis.                                      - Applied Computational Methods\n!Self declared by the student, CDC could not verify the relevant documents",
+      "transcript": [
+        {
+          "role": "model",
+          "text": "Hello Priyanshu, it's a pleasure to meet you! Thanks for joining us today. We're excited to learn more about your background.\n\nTo start, could you please introduce yourself and tell us a bit about what brings you here today?",
+          "timestamp": "2026-07-02T15:51:31.785Z"
+        }
+      ],
+      "report": null,
+      "startedAt": "2026-07-02T15:51:29.508Z",
+      "endedAt": null
+    },
+    {
+      "id": "3c2403b6-0598-4195-964d-98bf3525ed34",
+      "userId": "ab45a9d2-496e-4913-b2d1-980537cbaa97",
+      "type": "practice",
+      "topic": "Climate change",
+      "transcript": [
+        {
+          "role": "model",
+          "text": "Hello there! It's great to connect with you today. We're going to chat about climate change.\n\nTo get us started, I'm curious: have you noticed any changes in the weather or environment where you live over the past few years?",
+          "timestamp": "2026-07-03T03:46:05.096Z"
+        }
+      ],
+      "report": null,
+      "startedAt": "2026-07-03T03:46:01.158Z",
+      "endedAt": null
+    },
+    {
+      "id": "2a37d5eb-963b-4703-9977-4a50ddae15a5",
+      "userId": "ab45a9d2-496e-4913-b2d1-980537cbaa97",
+      "type": "practice",
+      "topic": "communication skills",
+      "transcript": [
+        {
+          "role": "model",
+          "text": "Hi there! It's great to connect with you today. We're going to chat about communication skills.\n\nTo kick things off, when you hear the phrase 'communication skills,' what's the very first thing that comes to your mind? No right or wrong answers, just your initial thoughts!",
+          "timestamp": "2026-07-03T04:35:33.524Z"
+        }
+      ],
+      "report": {
+        "overallSummary": "{\n  \"overallSummary\": \"The provided transcript is a well-structured and clear opening statement by an interviewer or coach. It effectively introduces the topic",
+        "strengths": [],
+        "mistakes": [],
+        "improvements": [],
+        "score": null
+      },
+      "startedAt": "2026-07-03T04:35:29.349Z",
+      "endedAt": "2026-07-03T04:36:29.109Z"
+    },
+    {
+      "id": "40012f1c-4cca-4006-8748-c75b5807dd31",
+      "userId": "ab45a9d2-496e-4913-b2d1-980537cbaa97",
+      "type": "practice",
+      "topic": "my home town",
+      "transcript": [
+        {
+          "role": "model",
+          "text": "Hello! It's great to connect today. Let's talk about your hometown. Could you start by telling me a little bit about where you grew up? What's it like there?",
+          "timestamp": "2026-07-03T04:37:14.984Z"
+        }
+      ],
+      "report": {
+        "overallSummary": "The provided transcript only contains the AI's prompt. There is no candidate speech available for analysis, therefore a comprehensive evaluation of the candidate's communication skills cannot be performed.",
+        "strengths": [],
+        "mistakes": [],
+        "improvements": [],
+        "score": 1
+      },
+      "startedAt": "2026-07-03T04:37:12.828Z",
+      "endedAt": "2026-07-03T04:38:28.406Z"
+    },
+    {
+      "id": "c43394b0-4663-4f9b-9413-0765e3d8c5a8",
+      "userId": "ab45a9d2-496e-4913-b2d1-980537cbaa97",
+      "type": "practice",
+      "topic": "my hometown",
+      "transcript": [
+        {
+          "role": "model",
+          "text": "Hi there! I'm excited to chat with you about your hometown today. To start us off, could you tell me a little bit about where you grew up? What's one thing you really love about it?",
+          "timestamp": "2026-07-03T04:39:06.296Z"
+        }
+      ],
+      "report": {
+        "overallSummary": "The provided transcript only contains the AI's prompt. There is no candidate response available for analysis. Therefore, a comprehensive assessment of communication skills cannot be performed based on the current input.",
+        "strengths": [],
+        "mistakes": [],
+        "improvements": [],
+        "score": 0
+      },
+      "startedAt": "2026-07-03T04:39:04.765Z",
+      "endedAt": "2026-07-03T04:39:33.227Z"
+    }
+  ]
+}
