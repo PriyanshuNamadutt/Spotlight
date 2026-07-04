@@ -2,7 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
-const { isValidUsername, isValidPassword, escapeRegex } = require('../utils/validators');
+const { isValidUsername, isValidPassword } = require('../utils/validators');
 
 const router = express.Router();
 
@@ -18,16 +18,22 @@ router.post('/register', async (req, res) => {
       return res.status(400).json({ message: 'Password must be at least 6 characters.' });
     }
 
-    const exists = await User.findOne({ username: { $regex: `^${escapeRegex(username)}$`, $options: 'i' } });
-    if (exists) return res.status(409).json({ message: 'That username is already taken.' });
+    const trimmedUsername = username.trim();
+    const usernameLower = trimmedUsername.toLowerCase();
+
+    const exists = await User.findOne({ usernameLower });
+    if (exists) {
+      console.warn(`[register] Blocked — "${trimmedUsername}" collides with existing user "${exists.username}" (case-insensitive match).`);
+      return res.status(409).json({ message: 'That username is already taken.' });
+    }
 
     const passwordHash = await bcrypt.hash(password, 10);
-    const user = await User.create({ username, passwordHash });
+    const user = await User.create({ username: trimmedUsername, usernameLower, passwordHash });
 
     const token = jwt.sign({ userId: user._id.toString(), username: user.username }, process.env.JWT_SECRET, { expiresIn: '7d' });
     res.status(201).json({ token, username: user.username });
   } catch (err) {
-    console.error(err);
+    console.error('[register] error:', err.message);
     if (err.code === 11000) return res.status(409).json({ message: 'That username is already taken.' });
     res.status(500).json({ message: 'Server error during registration.' });
   }
@@ -36,7 +42,9 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
-    const user = await User.findOne({ username: { $regex: `^${escapeRegex(username || '')}$`, $options: 'i' } });
+    const usernameLower = String(username || '').trim().toLowerCase();
+
+    const user = await User.findOne({ usernameLower });
     if (!user) return res.status(401).json({ message: 'Invalid username or password.' });
 
     const ok = await bcrypt.compare(password, user.passwordHash);
@@ -45,7 +53,7 @@ router.post('/login', async (req, res) => {
     const token = jwt.sign({ userId: user._id.toString(), username: user.username }, process.env.JWT_SECRET, { expiresIn: '7d' });
     res.json({ token, username: user.username });
   } catch (err) {
-    console.error(err);
+    console.error('[login] error:', err.message);
     res.status(500).json({ message: 'Server error during login.' });
   }
 });
